@@ -71,6 +71,7 @@ Set the APP_URL to the server url in the .env file.
 Edit the .env file to set the database hostname, name, username and password.
 
 Enter `composer install`.
+> **Note:** You may see an error message related to the database that you can ignore.
 
 Enter `npm install`.
 
