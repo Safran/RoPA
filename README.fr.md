@@ -71,6 +71,7 @@ Se placer dans le répertoire RoPA.
 Éditer le fichier .env pour renseigner l'hôte, le nom, le nom d'utilisateur et le mot de passe de la base de données.
 
 Entrer la commande `composer install`.
+> **Note :** Vous pourrez voir un message d'erreur lié à la base de données que vous pouvez ignorer.
 
 Entrer `npm install`.
 
