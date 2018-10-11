@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>UI/Icon/Document/Zip</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.0294190754 22.9401701 0.0294190754 22.9401701 30.3060679 0 30.3060679"></polygon>
+        <path d="M21.665761,27.7827539 C21.665761,28.4783155 21.0940468,29.0442261 20.3914266,29.0442261 L2.54887792,29.0442261 C1.84648182,29.0442261 1.27446883,28.4783155 1.27446883,27.7827539 L1.27446883,2.55242264 C1.27446883,1.85715675 1.84648182,1.29087651 2.54887792,1.29087651 L15.2935662,1.29087651 L15.2935662,5.07544098 C15.2935662,6.46715544 16.4368455,7.59838541 17.8424591,7.59838541 L21.665761,7.59838541 L21.665761,27.7827539 Z M16.5679753,2.18283626 L20.7648032,6.3369132 L17.8424591,6.3369132 C17.1401377,6.3369132 16.5679753,5.77100254 16.5679753,5.07544098 L16.5679753,2.18283626 Z M22.7534818,6.52170638 L16.381287,0.214197479 C16.2617318,0.0957820049 16.1001344,0.029404292 15.9306214,0.029404292 L2.54887792,0.029404292 C1.14318961,0.029404292 -1.49350649e-05,1.16100385 -1.49350649e-05,2.55242264 L-1.49350649e-05,27.7830496 C-1.49350649e-05,29.1744684 1.14318961,30.3060679 2.54887792,30.3060679 L20.3914266,30.3060679 C21.797339,30.3060679 22.9401701,29.1744684 22.9401701,27.7827539 L22.9401701,6.96779714 C22.9401701,6.80037451 22.8731117,6.64012186 22.7534818,6.52170638 Z" id="path-3"></path>
+        <filter x="-41.4%" y="-28.1%" width="182.8%" height="162.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-5" points="0.6714 0.497 5.3074 0.497 5.3074 6.9996 0.6714 6.9996"></polygon>
+        <path d="M2.6074,3.5996 C2.3954,3.5996 2.2434,3.5906 2.1184,3.5616 L2.1184,1.6556 C2.2234,1.6266 2.4244,1.5976 2.7214,1.5976 C3.4494,1.5976 3.8614,1.9536 3.8614,2.5456 C3.8614,3.2066 3.3824,3.5996 2.6074,3.5996 M4.6184,1.0136 C4.1874,0.6686 3.5454,0.4966 2.6454,0.4966 C1.7544,0.4966 1.1224,0.5546 0.6714,0.6306 L0.6714,6.9996 L2.1184,6.9996 L2.1184,4.6916 C2.2534,4.7106 2.4244,4.7206 2.6164,4.7206 C3.4784,4.7206 4.2154,4.5096 4.7134,4.0396 C5.0964,3.6756 5.3074,3.1406 5.3074,2.5076 C5.3074,1.8756 5.0304,1.3396 4.6184,1.0136" id="path-7"></path>
+        <filter x="-204.9%" y="-130.7%" width="509.8%" height="392.2%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="UI/Icon/Document/Zip" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(4.000000, 0.000000)">
+            <g id="Group-3" transform="translate(0.000000, 0.044498)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <g id="Fill-1" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#358ED7" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+        <g id="Page-1" transform="translate(9.000000, 12.000000)">
+            <polygon id="Fill-1" fill="#4C87C6" points="0.288 1.04758 0.288 2.25558 3.074 2.25558 3.074 2.29358 0 6.71858 0 7.50358 5.019 7.50358 5.019 6.29758 1.964 6.29758 1.964 6.25858 4.971 1.89058 4.971 1.04758"></polygon>
+            <polygon id="Fill-2" fill="#4C87C6" points="5.941 7.50328 7.406 7.50328 7.406 1.04728 5.941 1.04728"></polygon>
+            <g id="Group-5" transform="translate(8.000000, 0.503280)">
+                <mask id="mask-6" fill="white">
+                    <use xlink:href="#path-5"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <g id="Fill-3" mask="url(#mask-6)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="#358ED7" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

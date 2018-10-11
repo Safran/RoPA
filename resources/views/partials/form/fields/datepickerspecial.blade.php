@@ -1,0 +1,2 @@
+{{ bs()->formGroup(bs()->checkBox('default_to_now', __('admin/forms.formelement.datepickerspecial.default_to_now.label'), old('required', ((isset($settings) && isset($settings->default_to_now)) ? (bool)$settings->default_to_now : false))))
+->helpText(__('admin/forms.formelement.datepickerspecial.default_to_now.help')) }}

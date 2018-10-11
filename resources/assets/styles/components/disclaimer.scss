@@ -1,0 +1,77 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+
+
+
+
+
+@import "./../../../assets/styles/ui/clouds";
+@import "./../../../assets/styles/ui/indicators";
+
+.disclaimer-page {
+  display: flex;
+  min-height: 65vh;
+
+  &__text {
+    width: 100%;
+    z-index: 1;
+    padding-left: 6rem;
+    background-color: $white;
+
+    h1 {
+      margin-left: 2.8rem;
+      margin-bottom: $small-content-space;
+    }
+
+    &-item {
+      margin-bottom: $small-content-space;
+
+      h2 {
+        margin-bottom: 1rem;
+        @include fontSize(22)
+      }
+
+      p {
+        margin-top: 1rem;
+        line-height: 2rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    &__bottom-stuff {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.sidebar-component {
+  position: relative;
+  min-width: 10rem;
+  max-width: 10rem;
+  margin-top: 8rem;
+  background-color: $main-color;
+
+  .cloud-1 {
+    z-index: 2;
+    top: -6rem;
+    right: -6rem;
+  }
+
+  .plane {
+    position: absolute;
+    top: 0;
+    left: -4rem;
+  }
+}

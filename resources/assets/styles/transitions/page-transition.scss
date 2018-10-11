@@ -1,0 +1,25 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+
+
+
+
+.page-enter-active {
+  transition: all .3s ease;
+}
+.page-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.page-leave-to {
+  opacity: 0;
+}
+
+.page-enter {
+  opacity: 0;
+}

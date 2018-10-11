@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>UI/Icon/Document/Word</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.0294190754 22.9401701 0.0294190754 22.9401701 30.3060679 0 30.3060679"></polygon>
+        <path d="M21.665761,27.7827539 C21.665761,28.4783155 21.0940468,29.0442261 20.3914266,29.0442261 L2.54887792,29.0442261 C1.84648182,29.0442261 1.27446883,28.4783155 1.27446883,27.7827539 L1.27446883,2.55242264 C1.27446883,1.85715675 1.84648182,1.29087651 2.54887792,1.29087651 L15.2935662,1.29087651 L15.2935662,5.07544098 C15.2935662,6.46715544 16.4368455,7.59838541 17.8424591,7.59838541 L21.665761,7.59838541 L21.665761,27.7827539 Z M16.5679753,2.18283626 L20.7648032,6.3369132 L17.8424591,6.3369132 C17.1401377,6.3369132 16.5679753,5.77100254 16.5679753,5.07544098 L16.5679753,2.18283626 Z M22.7534818,6.52170638 L16.381287,0.214197479 C16.2617318,0.0957820049 16.1001344,0.029404292 15.9306214,0.029404292 L2.54887792,0.029404292 C1.14318961,0.029404292 -1.49350649e-05,1.16100385 -1.49350649e-05,2.55242264 L-1.49350649e-05,27.7830496 C-1.49350649e-05,29.1744684 1.14318961,30.3060679 2.54887792,30.3060679 L20.3914266,30.3060679 C21.797339,30.3060679 22.9401701,29.1744684 22.9401701,27.7827539 L22.9401701,6.96779714 C22.9401701,6.80037451 22.8731117,6.64012186 22.7534818,6.52170638 Z" id="path-3"></path>
+        <filter x="-41.4%" y="-28.1%" width="182.8%" height="162.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-5" points="0 0 11 0 11 9 0 9"></polygon>
+        <path d="M2.04670248,9 L0,0 L2.08527305,0 L2.73769024,3.71223227 C2.92972247,4.78058068 3.10862429,5.94316992 3.24895554,6.85045217 L3.2743957,6.85045217 C3.4155476,5.87548786 3.61988959,4.7934317 3.83736198,3.68567349 L4.56609967,0 L6.63906297,0 L7.32923008,3.79190861 C7.52126231,4.847406 7.66159355,5.80866254 7.78961504,6.81018563 L7.81505521,6.81018563 C7.94389734,5.80866254 8.13510892,4.75402189 8.31483139,3.68567349 L9.01730827,0 L11,0 L8.7743957,9 L6.66368248,9 L5.93494479,5.12670157 C5.76917338,4.21941932 5.62802149,3.37810566 5.52544017,2.3500238 L5.5,2.3500238 C5.34653835,3.36525464 5.2062071,4.21941932 5.00186511,5.12670157 L4.18285586,9 L2.04670248,9 Z" id="path-7"></path>
+        <filter x="-86.4%" y="-94.4%" width="272.7%" height="311.1%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="UI/Icon/Document/Word" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(4.000000, 0.000000)">
+            <g id="Group-3" transform="translate(0.000000, 0.044498)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <g id="Fill-1" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#358ED7" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+        <g id="Page-1" transform="translate(10.000000, 13.000000)">
+            <mask id="mask-6" fill="white">
+                <use xlink:href="#path-5"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <g id="Fill-1" mask="url(#mask-6)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                <use fill="#358ED7" fill-rule="evenodd" xlink:href="#path-7"></use>
+            </g>
+        </g>
+    </g>
+</svg>

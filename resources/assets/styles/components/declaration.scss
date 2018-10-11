@@ -1,0 +1,152 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+
+
+
+
+.declaration-component {
+  position: relative;
+  padding: 1.5rem 1rem 1rem;
+  width: 25rem;
+  height: 14rem;
+  text-align: center;
+  border-radius: 3px;
+  color: $white;
+  cursor: pointer;
+  tansition: all .3s ease;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  @include tablet {
+    margin-bottom: 2rem;
+  }
+
+  &:hover {
+    color: $white;
+    opacity: .8;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      margin: 0.5rem 0;
+      @include fontSize(14);
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .title {
+      @include fontSize(14);
+    }
+  }
+
+  .progress-wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translate(-50%);
+    width: 90%;
+  }
+}
+
+.declarations-items {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    justify-content: space-around;
+  }
+
+  &__placeholder {
+    width: 25rem;
+    height: 14rem;
+    border-radius: 3px;
+    background-color: $light-grey;
+
+    @include tablet {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.declarations-see-more {
+  float: right;
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+  width: inherit;
+
+  @include tablet {
+    margin-top: 0;
+  }
+
+  &:hover .plus {
+    transform: rotate(90deg) translateY(-50%);
+
+    &-line {
+      background-color: $main-color;
+    }
+  }
+
+  .plus {
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    transform-origin: 50% 0;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+    width: 0.9rem;
+    height: 0.9rem;
+
+    &-line {
+      position: absolute;
+      top: 50%;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $black;
+    }
+
+    &-line-1 {
+    }
+
+    &-line-2 {
+      transform: rotate(90deg);
+    }
+  }
+}
+@import "./../../../assets/styles/ui/declarations";
+
+.pending-declarations {
+  margin-bottom: $medium-content-space;
+}
+.declarations-ip-page {
+  &__filters {
+    margin: $small-content-space 0;
+  }
+}
+
+
+.inprogress-declarations {
+  margin-bottom: $big-content-space;
+}

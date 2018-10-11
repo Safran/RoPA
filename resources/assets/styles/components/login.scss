@@ -1,0 +1,121 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+
+
+
+
+@import "../ui/clouds";
+
+.login-page {
+  height: 100vh;
+  background-size: cover;
+  background: url("../../img/login/wave.svg") no-repeat center;
+
+  @include tablet {
+    background: url("../../img/login/mobile/wave-mobile.svg") no-repeat fixed;
+    background-position-y: 110%;
+  }
+
+  .logo {
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100vw;
+    height: 50vh;
+
+    &-item {
+      width: 100%;
+      height: 100%;
+    }
+
+    &-images {
+      position: relative;
+      padding-left: 3rem;
+
+      @include tablet {
+        display: none;
+      }
+
+      .plane {
+        position: absolute;
+        top: 12%;
+        right: 25%;
+        width: 34rem;
+      }
+
+      .cloud-1 {
+        top: 9%;
+      }
+
+      .cloud-2 {
+        top: -10%;
+        left: 14%;
+      }
+
+      .cloud-3 {
+        top: 9%;
+        right: 47%;
+      }
+
+      .cloud-4 {
+        bottom: 7%;
+      }
+
+      .cloud-5 {
+        right: 10%;
+        bottom: 0;
+      }
+    }
+
+    &-form {
+      padding-left: 10rem;
+
+      @include tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3rem;
+      }
+
+      &__container {
+        width: 32rem;
+
+        @include tablet {
+          width: 100%;
+        }
+
+        .submit-button {
+          margin-top: 4rem;
+          float: right;
+
+          @include tablet {
+            display: block;
+            margin: 4rem auto 0 auto;
+            float: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-component {
+    position: absolute;
+    bottom: 0;
+  }
+}

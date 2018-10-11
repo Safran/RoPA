@@ -1,0 +1,1 @@
+<menu-mobile :items="{{ $items }}"></menu-mobile>

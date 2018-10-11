@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>UI/Icon/Document/Unknown</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.0294190754 22.9401701 0.0294190754 22.9401701 30.3060679 0 30.3060679"></polygon>
+        <path d="M21.665761,27.7827539 C21.665761,28.4783155 21.0940468,29.0442261 20.3914266,29.0442261 L2.54887792,29.0442261 C1.84648182,29.0442261 1.27446883,28.4783155 1.27446883,27.7827539 L1.27446883,2.55242264 C1.27446883,1.85715675 1.84648182,1.29087651 2.54887792,1.29087651 L15.2935662,1.29087651 L15.2935662,5.07544098 C15.2935662,6.46715544 16.4368455,7.59838541 17.8424591,7.59838541 L21.665761,7.59838541 L21.665761,27.7827539 Z M16.5679753,2.18283626 L20.7648032,6.3369132 L17.8424591,6.3369132 C17.1401377,6.3369132 16.5679753,5.77100254 16.5679753,5.07544098 L16.5679753,2.18283626 Z M22.7534818,6.52170638 L16.381287,0.214197479 C16.2617318,0.0957820049 16.1001344,0.029404292 15.9306214,0.029404292 L2.54887792,0.029404292 C1.14318961,0.029404292 -1.49350649e-05,1.16100385 -1.49350649e-05,2.55242264 L-1.49350649e-05,27.7830496 C-1.49350649e-05,29.1744684 1.14318961,30.3060679 2.54887792,30.3060679 L20.3914266,30.3060679 C21.797339,30.3060679 22.9401701,29.1744684 22.9401701,27.7827539 L22.9401701,6.96779714 C22.9401701,6.80037451 22.8731117,6.64012186 22.7534818,6.52170638 Z" id="path-3"></path>
+        <filter x="-41.4%" y="-28.1%" width="182.8%" height="162.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.24 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="UI/Icon/Document/Unknown" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1" transform="translate(4.000000, 0.000000)">
+            <g id="Group-3" transform="translate(0.000000, 0.044498)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <g id="Fill-1" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#358ED7" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

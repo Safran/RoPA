@@ -1,0 +1,1 @@
+{!!  app('Menu')::render('footer') !!}

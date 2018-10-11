@@ -1,0 +1,25 @@
+<!--
+    This file is part of the Record of processing activities project.
+    Its original location is https://github.com/Safran/RoPA
+    
+    SPDX-License-Identifier: GPL-3.0-only
+  -->
+
+
+
+
+
+
+<script>
+
+// Prevent from DOM clobbering.
+if ( typeof window.opener._cke_htmlToLoad == 'string' ) {
+	var doc = document;
+	doc.open();
+	doc.write( window.opener._cke_htmlToLoad );
+	doc.close();
+
+	delete window.opener._cke_htmlToLoad;
+}
+
+</script>

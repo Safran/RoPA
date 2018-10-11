@@ -1,0 +1,85 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+
+
+
+
+@mixin fontSize($sizeValue: 1.6) {
+  font-size: ($sizeValue * 1) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+/* Media Queries */
+@mixin custom-break($break) {
+  @media only screen and (max-width: $break) {
+    @content;
+  }
+}
+
+/* Tablet */
+@mixin tablet {
+  @media only screen and (max-width: $break_layout_tablet) {
+    @content;
+  }
+}
+
+/* Mobile */
+@mixin mobile {
+  @media only screen and (max-width: $break_layout_mobile) {
+    @content;
+  }
+}
+
+
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem-calc($values, $base: null) {
+  $rem-values: ();
+  $count: length($values);
+  @if $base == null {
+    $base: 100% !default;
+  }
+  @if unit($base) == '%' {
+    $base: ($base / 100%) * 16px;
+  }
+  @if unit($base) == 'rem' {
+    $base: strip-unit($base) * 16px;
+  }
+  @if $count == 1 {
+    @return -zf-to-rem($values, $base);
+  }
+  @for $i from 1 through $count {
+    $rem-values: append($rem-values, -zf-to-rem(nth($values, $i), $base));
+  }
+  @return $rem-values;
+}
+
+@function -zf-to-rem($value, $base: null) {
+  @if type-of($value) != 'number' {
+    @warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+    @return $value;
+  }
+
+  @if unit($value) == 'em' {
+    $value: strip-unit($value) * 1rem;
+  }
+
+  @if unit($value) != 'rem' {
+    $value: strip-unit($value) / strip-unit($base) * 1rem;
+  }
+
+  @if $value == 0rem {
+    $value: 0;
+  }
+
+  @return $value;
+}

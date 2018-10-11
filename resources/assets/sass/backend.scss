@@ -1,0 +1,276 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+// Bootstrap
+@import "variables";
+@import '~bootstrap/scss/bootstrap';
+@import "../styles/colors";
+@import "../styles/mixins";
+@import "../styles/variables";
+@import "../styles/ui/form";
+@import "../styles/ui/buttons";
+@import "../styles/ui/text-styling";
+@import '../styles/components/header_title';
+@import '../styles/menu/header_menu';
+@import '../styles/components/footer';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  color: $text-color;
+  font-family: "Arial", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.maincontainer {
+  margin: 0 auto;
+  padding-top: 18rem;
+  max-width: $container-width;
+
+  @include custom-break($container-width) {
+    padding: 18rem 2.5rem 0 2.5rem;
+  }
+}
+
+.small-container {
+  margin: 0 auto;
+  padding-top: 18rem;
+  max-width: $small-container-width;
+
+  @include custom-break($small-container-width) {
+    padding: 0 2.5rem;
+  }
+}
+
+.return-home {
+  display: block;
+  position: relative;
+  margin-bottom: $medium-content-space;
+
+  &::before {
+    content: url("./../../assets/img/general/arrow-left.svg");
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    transform: translateY(-50%);
+  }
+}
+
+a.active {
+  border-bottom: 5px solid $darker-main-color;
+}
+
+table.-sortable th:first-child,
+table.dataTable.-sortable th:first-child {
+  padding-left: 2rem;
+}
+
+table.-sortable tbody tr,
+table.dataTable.-sortable tbody tr {
+  cursor: move;
+}
+
+table.-sortable tbody tr[data-sortable='disabled'],
+table.dataTable.-sortable tbody tr[data-sortable='disabled'] {
+  cursor: default;
+}
+
+table.-sortable tbody tr[data-sortable='disabled'] td:first-child:before,
+table.dataTable.-sortable tbody tr[data-sortable='disabled'] td:first-child:before {
+  display: none;
+}
+
+table.-sortable tbody tr.ui-sortable-helper,
+table.dataTable.-sortable tbody tr.ui-sortable-helper {
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+  opacity: .85;
+}
+
+table.-sortable tbody tr.ui-sortable-helper td,
+table.dataTable.-sortable tbody tr.ui-sortable-helper td {
+  background-color: $grey;
+  border-bottom-color: transparent !important;
+}
+
+table.-sortable tbody tr.ui-sortable-placeholder td,
+table.dataTable.-sortable tbody tr.ui-sortable-placeholder td {
+  height: 2rem !important;
+}
+
+table.-sortable td:first-child,
+table.dataTable.-sortable td:first-child {
+  padding-left: 0;
+  white-space: nowrap;
+}
+
+table.-sortable td.dataTables_empty:before,
+table.dataTable.-sortable td.dataTables_empty:before {
+  display: none !important;
+  padding: 2em 0 !important;
+  cursor: default;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+}
+
+@mixin transform-style($transform-style) {
+  transform-style: $transform-style;
+}
+
+@mixin translate($x,$y) {
+  transform: translate($x, $y);
+}
+
+$animsition-loading-spinner-bg: $grey !default;
+$index-loader-line-width: 4px !default;
+$index-loader-line-height: 35px !default;
+$index-loader-color: #fff !default;
+
+@function loaderdelay($interval, $count, $index) {
+  @return ($index * $interval) - ($interval * $count);
+}
+
+.loader {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 40px;
+  text-indent: -9999em;
+
+  @include transform(translateZ(0));
+}
+
+.loader-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: $main-color;
+  z-index: 999999;
+}
+
+.loader-content {
+  margin: 50vh auto 0;
+  transform: translateY(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  h2 {
+    color: $index-loader-color;
+    font-weight: 500;
+  }
+}
+
+select,
+.dataTables_wrapper label {
+  font-size: 150%;
+}
+
+.loader-page {
+  margin-top: 20px;
+  > div {
+    width: $index-loader-line-width;
+    height: $index-loader-line-height;
+    border-radius: 2px;
+    margin: 2px;
+    background: $index-loader-color;
+    animation-fill-mode: both;
+
+    display: inline-block;
+    animation: loader-page 0.9s loaderdelay(0.2s, 4, 0) infinite cubic-bezier(.85, .25, .37, .85);
+
+    &:nth-child(2), &:nth-child(4), &:nth-child(8) {
+      animation-delay: loaderdelay(0.2s, 4, 1) !important;
+    }
+
+    &:nth-child(1), &:nth-child(5), &:nth-child(7) {
+      animation-delay: loaderdelay(0.2s, 4, 2) !important;
+    }
+    &:nth-child(6) {
+      animation-delay: loaderdelay(0.2s, 4, 3) !important;
+    }
+  }
+}
+
+@keyframes loader-page {
+  0% {
+    transform: scaleY(1.0);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  100% {
+    transform: scaleY(1.0);
+  }
+}
+
+
+
+.header-menu__desktop .lang-select {
+  display: inline-block;
+  width: 100%;
+  height: calc(2.19rem + 2px);
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  line-height: 1.6;
+  vertical-align: middle;
+  background: $white;
+  background: $white url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+  background-size: auto auto;
+  background-size: 8px 10px;
+  border: 1px solid $darker-main-color;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: $darker-main-color;
+
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.header-menu__desktop .lang-select.small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.header-menu__desktop .lang-select:focus {
+  border-color: $darker-main-color;
+  outline: 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+.header-menu__desktop .lang-select:focus::-ms-value {
+  color: $darker-main-color;
+  background-color: $white;
+}
+
+.header-menu__desktop .lang-select::-ms-expand {
+  opacity: 0;
+}
+
+p, a, li, td
+{
+  font-size: 1.2rem;
+}

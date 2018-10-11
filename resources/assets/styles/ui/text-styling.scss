@@ -1,0 +1,79 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+
+
+
+
+h1, h2 {
+  font-family: 'Helvetica-bold-font', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  @include fontSize(32)
+}
+
+h2 {
+  @include fontSize(24)
+}
+
+p, a, li, td {
+  margin: 0;
+  @include fontSize(14);
+}
+
+a {
+  text-decoration: none;
+  color: $main-color;
+  transition: all .3s ease;
+
+  &:hover {
+    color: $darker-main-color;
+  }
+}
+
+.bold {
+  font-family: 'Helvetica-bold-font', sans-serif;
+}
+
+.thin {
+  font-family: 'Helvetica-thin-font', sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.return-home {
+  display: block;
+  position: relative;
+  margin-bottom: $medium-content-space;
+
+  @include mobile {
+    margin-left: 1.4rem;
+    margin-bottom: $small-content-space;
+  }
+
+  &::before {
+    content: url("./../../../assets/img/general/arrow-left.svg");
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    transform: translateY(-50%);
+  }
+
+  &__align {
+    margin-left: 19.5rem;
+
+    @include mobile {
+      margin-left: 1.4rem;
+    }
+  }
+}

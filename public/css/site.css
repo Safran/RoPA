@@ -1,0 +1,146 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.form-group{margin-top:2rem}label{font-size:14px;font-size:1.4rem}label:not(.radio-group__label):not(.checkbox-element),p{max-width:93%;font-size:14px;font-size:1.4rem}input,select,textarea{width:100%;height:3rem;display:block;border:none;border-bottom:1px solid #34495e;font-size:14px;font-size:1.4rem;color:#34495e;border-bottom:1px solid #b5b5b5;font-family:Helvetica-font,sans-serif;-webkit-transition:all .3s ease;transition:all .3s ease;background-color:transparent}input::-webkit-input-placeholder,select::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#b5b5b5;font-size:12px;font-size:1.2rem}input::-ms-input-placeholder,select::-ms-input-placeholder,textarea::-ms-input-placeholder{color:#b5b5b5;font-size:12px;font-size:1.2rem}input::placeholder,select::placeholder,textarea::placeholder{color:#b5b5b5;font-size:12px;font-size:1.2rem}input:not([readonly]):focus,select:not([readonly]):focus,textarea:not([readonly]):focus{border-bottom-color:#6e4573}select{-webkit-appearance:none;-webkit-border-radius:0}.declarations-form .form-group{margin:4rem 0;padding:.5rem 0 .5rem 3.5rem;border-left:.25rem solid #6e4573}.declarations-form .form-group input:not([type=date]):not([type=radio]){width:100%}.declarations-form .form-group input[type=date]{font-size:14px;font-size:1.4rem}.declarations-form .form-group__edit{margin-left:3rem;margin-bottom:0;border-left-color:#4c87c6;width:100%}@media only screen and (max-width:700px){.declarations-form .form-group__edit{margin-left:0}}.declarations-form .form-group__edit-locked{background-color:red}.declarations-form .form-group__edit-unlocked{background-color:green}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.btn-primary,.btn-secondary{padding:1.2rem 2.2rem;border:none;border-radius:3px;font-size:14px;font-size:1.4rem;cursor:pointer;color:#fff;-webkit-transition:all .3s ease;transition:all .3s ease;font-family:Helvetica-thin-font,sans-serif}.btn-primary__small,.btn-secondary__small{padding:.7rem 1rem}.btn-primary{background-color:#4c87c6;cursor:pointer}.btn-primary:hover{color:#fff;opacity:.8}.btn-secondary{background-color:#b5b5b5}.btn-secondary:hover{color:#fff;opacity:.8}.btn-chevron{padding:0;position:relative;border:none;color:#b5b5b5;font-size:12px;font-size:1.2rem;cursor:pointer;-webkit-transition:all .3s ease;transition:all .3s ease;background-color:transparent;outline:none}.btn-chevron:before{content:">";position:absolute;top:45%;left:-1.4rem;-webkit-transform:translateY(-50%);transform:translateY(-50%);font-size:12px;font-size:1.2rem}.btn-chevron:hover{color:#4c87c6}.btn-more{position:relative;display:block;width:3rem;height:3rem;border-radius:3px;color:#fff;background-color:#4c87c6;cursor:pointer}.btn-more:after{content:"+";position:absolute;top:50%;left:52%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-size:20px;font-size:2rem}.btn-more:hover{color:#fff;opacity:.8}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */h1,h2{font-family:Helvetica-bold-font,sans-serif;margin:0}h1{margin-bottom:1rem;font-size:32px;font-size:3.2rem}h2{font-size:24px;font-size:2.4rem}a,li,p,td{margin:0;font-size:14px;font-size:1.4rem}a{text-decoration:none;color:#4c87c6;-webkit-transition:all .3s ease;transition:all .3s ease}a:hover{color:#365579}.bold{font-family:Helvetica-bold-font,sans-serif}.thin{font-family:Helvetica-thin-font,sans-serif}.text-center{text-align:center}@media only screen and (max-width:700px){.return-home{margin-left:1.4rem;margin-bottom:3.5rem}}.return-home:before{content:url(/images/arrow-left.svg?3486ec4e97c3c27111b7ae346af2778f)}.return-home__align{margin-left:19.5rem}@media only screen and (max-width:700px){.return-home__align{margin-left:1.4rem}}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.header-title{z-index:11;position:fixed;width:100%;height:6rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;letter-spacing:.3rem;text-transform:uppercase;font-family:Gotham-font,sans-serif;color:#525668;background-color:#fff}@media only screen and (max-width:700px){.header-title{height:4rem}}.header-title__item{width:33.33333%;text-align:center}@media only screen and (max-width:1080px){.header-title__item:nth-of-type(2){padding:0 1rem;width:60rem}}.header-title__item:nth-of-type(2) p{margin:0;font-size:14px;font-size:1.4rem}@media only screen and (max-width:1080px){.header-title__item:nth-of-type(2) p{line-height:1.5rem;font-size:11px;font-size:1.1rem}}.header-title__item-line{height:2px;background-color:#b5b5b5;width:100%}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.shadow{-webkit-box-shadow:0 1px 5px 0 hsla(0,0%,71%,.15);box-shadow:0 1px 5px 0 hsla(0,0%,71%,.15)}.header-menu{z-index:10;position:fixed;width:100%;margin-top:6rem;background-color:#fff;-webkit-transition:all .3s ease;transition:all .3s ease;letter-spacing:.2rem;font-size:12px;font-size:1.2rem}@media only screen and (max-width:700px){.header-menu{margin-top:4rem}}.header-menu__content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin:0 auto;height:7rem}@media only screen and (max-width:700px){.header-menu__content img{height:3.5rem}}.header-menu__desktop{width:1080px}.header-menu__links{margin:0;padding:0;list-style-type:none}.header-menu__links li{padding:1rem .8rem;display:inline-block}.header-menu__links li a{text-transform:uppercase}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.footer-component{width:100%;margin-top:8rem;margin-bottom:3rem}@media only screen and (max-width:1080px){.footer-component{margin-top:3.5rem;margin-bottom:5rem}}.footer-component ul{padding:0;margin:0 auto;text-align:center;list-style-type:none;max-width:80vw}.footer-component ul li{display:inline-block;position:relative;margin:0 1rem}.footer-component ul li:hover:before,.footer-component ul li:hover a{color:#365579}.footer-component ul li:before{content:"-";position:absolute;left:-1rem;color:#858585}.footer-component ul li:first-of-type{margin-left:0}.footer-component ul li:first-of-type:before{display:none}.footer-component ul li:last-of-type{margin-right:0}.footer-component ul li a{color:#858585}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.login-page{height:100vh;background-size:cover;background:url(/images/wave.svg?6ba640f8efab220718765aee1e20fe57) no-repeat 50%}@media only screen and (max-width:1080px){.login-page{background:url(/images/wave-mobile.svg?24e376077f574abd536c22a62dd02475) no-repeat fixed;background-position-y:110%}}.login-page .logo{position:absolute;top:8rem;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}.login-page__content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:100vw;height:50vh}.login-page__content-item{width:100%;height:100%}.login-page__content-images{position:relative;padding-left:3rem}@media only screen and (max-width:1080px){.login-page__content-images{display:none}}.login-page__content-images .plane{position:absolute;top:12%;right:25%;width:34rem}.login-page__content-images .cloud-1{top:9%}.login-page__content-images .cloud-2{top:-10%;left:14%}.login-page__content-images .cloud-3{top:9%;right:47%}.login-page__content-images .cloud-4{bottom:7%}.login-page__content-images .cloud-5{right:10%;bottom:0}.login-page__content-form{padding-left:10rem}@media only screen and (max-width:1080px){.login-page__content-form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 3rem}}.login-page__content-form__container{width:32rem}@media only screen and (max-width:1080px){.login-page__content-form__container{width:100%}}.login-page__content-form__container .submit-button{margin-top:4rem;float:right}@media only screen and (max-width:1080px){.login-page__content-form__container .submit-button{display:block;margin:4rem auto 0;float:inherit}}.login-page .footer-component{position:absolute;bottom:0}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.welcome-content{margin-bottom:8rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}@media only screen and (max-width:1080px){.welcome-content{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}}.welcome-content-item{width:50%}@media only screen and (max-width:1080px){.welcome-content-image img,.welcome-content-item{width:100%}}.welcome-content-text{padding-top:4rem}.welcome-content-text p{margin-bottom:6rem}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.declaration-component{position:relative;padding:1.5rem 1rem 1rem;width:25rem;height:14rem;text-align:center;border-radius:3px;color:#fff;cursor:pointer;tansition:all .3s ease}@media only screen and (max-width:700px){.declaration-component{width:100%}}@media only screen and (max-width:1080px){.declaration-component{margin-bottom:2rem}}.declaration-component:hover{color:#fff;opacity:.8}.declaration-component ul{margin:0;padding:0;list-style-type:none}.declaration-component ul li{margin:.5rem 0;font-size:14px;font-size:1.4rem}.declaration-component ul li:first-of-type{margin-top:0}.declaration-component ul li:last-of-type{margin-bottom:0}.declaration-component ul .title{font-size:14px;font-size:1.4rem}.declaration-component .progress-wrap{position:absolute;left:50%;bottom:1rem;-webkit-transform:translate(-50%);transform:translate(-50%);width:90%}.declarations-see-more:hover .plus-line{background-color:#4c87c6}.declarations-see-more .plus-line{background-color:#000}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.declarations-items{margin-top:1.2rem;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.declarations-items li:first-of-type,.declarations-items li:nth-of-type(2),.declarations-items li:nth-of-type(3){letter-spacing:.1rem;font-family:Helvetica-thin-font,sans-serif;font-size:11px;font-size:1.1rem}@media only screen and (max-width:1080px){.declarations-items{-ms-flex-pack:distribute;justify-content:space-around}}.declarations-items__placeholder{width:25rem;height:14rem;border-radius:3px;background-color:#f1f1f1}@media only screen and (max-width:1080px){.declarations-items__placeholder{margin-bottom:2rem}}.declarations-see-more{float:right;position:relative;display:inline-block;margin-top:2rem;width:inherit}@media only screen and (max-width:1080px){.declarations-see-more{margin-top:0}}.declarations-see-more:hover .plus{-webkit-transform:rotate(90deg) translateY(-50%);transform:rotate(90deg) translateY(-50%)}.declarations-see-more:hover .plus-line{background-color:#34495e}.declarations-see-more .plus{left:-2rem;-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:.9rem;height:.9rem}.declarations-see-more .plus,.declarations-see-more .plus-line{position:absolute;top:50%;-webkit-transition:all .3s ease;transition:all .3s ease}.declarations-see-more .plus-line{display:block;width:100%;height:1px;background-color:#4c87c6}.declarations-see-more .plus-line-2{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.pending-declarations{margin-bottom:5rem}.declarations-ip-page__filters{margin:3.5rem 0}.inprogress-declarations{margin-bottom:8rem}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.declarations-table a:not(.btn-more):not(.btn-primary){color:#34495e}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.indicators-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:1.2rem;margin-bottom:3.5rem}.indicators-wrap .indicator{position:relative;display:inline-block;margin:0 .7rem;width:1.2rem;height:1.2rem;border-radius:50%;background-color:#b5b5b5;-webkit-transition:all .3s ease;transition:all .3s ease}.indicators-wrap .indicator:first-of-type{margin-left:0}.indicators-wrap .indicator:last-of-type{margin-right:0}.indicators-wrap .indicator-active-disclaimer{background-color:#4c87c6}.indicators-wrap .indicator-focus:before{z-index:-1;content:"";position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:1.8rem;height:1.8rem;border-radius:50%;border:1px solid #48d2a0}.indicators-wrap .indicator-validate{background-color:#48d2a0}.indicators-wrap .pointer{cursor:pointer}.disclaimer-page{display:-webkit-box;display:-ms-flexbox;display:flex;min-height:65vh}.disclaimer-page__text{width:100%;z-index:1;padding-left:6rem;background-color:#fff}.disclaimer-page__text h1{margin-left:2.8rem;margin-bottom:3.5rem}.disclaimer-page__text-item{margin-bottom:3.5rem}.disclaimer-page__text-item h2{margin-bottom:1rem;font-size:22px;font-size:2.2rem}.disclaimer-page__text-item p{margin-top:1rem;line-height:2rem}.disclaimer-page__text-item:last-of-type{margin-bottom:0}.disclaimer-page__text__bottom-stuff{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.sidebar-component{position:relative;min-width:10rem;max-width:10rem;margin-top:8rem;background-color:#4c87c6}.sidebar-component .cloud-1{z-index:2;top:-6rem;right:-6rem}.sidebar-component .plane{position:absolute;top:0;left:-4rem}
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */.cloud{position:absolute}.cloud-xs{width:4rem}.cloud-s{width:5.6rem}.cloud-m{width:8rem}.cloud-l{width:14rem}.no-content{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:60vh;margin-top:3.5rem}.no-content__images{z-index:-2;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.2}.no-content__images .cloud-1{top:28%;left:10%}.no-content__images .cloud-2{top:16%;left:20%}.no-content__images .cloud-3{top:11%;left:50%}.no-content__images .cloud-4{top:70%;left:14%}.no-content__images .cloud-5{top:55%;right:6%}.no-content__images .plane{position:absolute;top:30%;left:50%;-webkit-transform:translate(-50%,-30%);transform:translate(-50%,-30%)}.no-content:after{z-index:-1;content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:#b5b5b5;opacity:.2}html{font-size:62.5%}body{margin:0;color:#34495e;font-family:Arial,sans-serif}*{-webkit-box-sizing:border-box;box-sizing:border-box}img{user-drag:none;user-select:none;-moz-user-select:none;-webkit-user-drag:none;-webkit-user-select:none;-ms-user-select:none}.container{margin:0 auto;padding-top:18rem;max-width:1080px}@media only screen and (max-width:1080px){.container{padding:18rem 2.5rem 0}}.small-container,.small-container-np{margin:0 auto;max-width:700px}@media only screen and (max-width:700px){.small-container,.small-container-np{padding:0 2.5rem}}.small-container{padding-top:18rem}.return-home{display:block;position:relative;margin-bottom:5rem}.return-home:before{content:url(/images/arrow-left.svg?3486ec4e97c3c27111b7ae346af2778f);position:absolute;top:50%;left:-3rem;-webkit-transform:translateY(-50%);transform:translateY(-50%)}a.nav-link.active{border-bottom:5px solid #365579}.badge.up{position:relative;top:-25px;margin:0 -.8em;border-radius:20px}.badge-pill{padding:3px 6px}.badge{display:inline-block;font-size:75%;font-weight:400;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline}.badge-danger{color:#fff;background-color:#dc3545}.alert{background-color:hsla(0,0%,93%,.8);border:none;padding:12px 20px;background-color:#cce5ff;position:relative;margin-bottom:1.143rem;border-radius:.215rem;background-color:rgba(197,202,233,.8);border-color:#365579;border-left:3px solid transparent}.alert,.text-primary{color:#4c87c6}a.text-primary:focus,a.text-primary:hover{color:#4c87c6!important}.background-primary{border-color:#365579}.header-menu__desktop .lang-select{display:inline-block;width:100%;height:calc(2.19rem + 2px);padding:.375rem 1.75rem .375rem .75rem;line-height:1.6;vertical-align:middle;background:#fff;background:#fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right .75rem center;background-size:auto auto;background-size:8px 10px;border:1px solid #365579;border-top:none;border-left:none;border-right:none;border-bottom-color:#365579;border-radius:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}.header-menu__desktop .lang-select.small{font-size:80%;font-weight:400}.header-menu__desktop .lang-select:focus{border-color:#365579;outline:0;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,.075),0 0 5px rgba(128,189,255,.5);box-shadow:inset 0 1px 2px rgba(0,0,0,.075),0 0 5px rgba(128,189,255,.5)}.header-menu__desktop .lang-select:focus::-ms-value{color:#365579;background-color:#fff}.header-menu__desktop .lang-select::-ms-expand{opacity:0}body.pace-running{background:#fff}.pace.pace-inactive,body.pace-running #app{display:none}.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:fixed;margin:auto;top:0;left:0;right:0;bottom:0}.pace,.pace .pace-progress{z-index:2000;height:60px;width:100px}.pace .pace-progress{position:absolute;-webkit-transform:translateZ(0)!important;transform:translateZ(0)!important}.pace .pace-progress:before{content:attr(data-progress-text);text-align:center;color:#fff;background:#4c87c6;border-radius:50%;font-family:Helvetica Neue,sans-serif;font-size:14px;font-weight:100;line-height:1;padding:20% 0 7px;width:50%;height:40%;margin:10px 0 0 30px;display:block;z-index:999;position:absolute}.pace .pace-activity{font-size:15px;line-height:1;z-index:2000;-webkit-animation:pace-theme-center-atom-spin 2s linear infinite;animation:pace-theme-center-atom-spin 2s linear infinite;border-radius:50%;border:5px solid #365579;content:" ";display:block;position:absolute;top:0;left:0;height:60px;width:100px}.pace .pace-activity:after{-webkit-transform:rotate(60deg);transform:rotate(60deg)}.pace .pace-activity:after,.pace .pace-activity:before{border-radius:50%;border:5px solid #365579;content:" ";display:block;position:absolute;top:-5px;left:-5px;height:60px;width:100px}.pace .pace-activity:before{-webkit-transform:rotate(120deg);transform:rotate(120deg)}@-webkit-keyframes pace-theme-center-atom-spin{0%{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(359deg)}}@keyframes pace-theme-center-atom-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.custom-select{-webkit-appearance:none;-moz-appearance:none;appearance:none}

@@ -1,0 +1,96 @@
+/*!
+  * This file is part of the Record of processing activities project.
+  * Its original location is https://github.com/Safran/RoPA
+  * 
+  * SPDX-License-Identifier: GPL-3.0-only
+  */
+
+
+
+
+
+
+.btn-primary, .btn-secondary {
+  padding: 1.2rem 2.2rem;
+  border: none;
+  border-radius: 3px;
+  @include fontSize(14);
+  cursor: pointer;
+  color: $white;
+  transition: all .3s ease;
+  font-family: 'Helvetica-thin-font', sans-serif;
+
+  &__small {
+    padding: .7rem 1rem;
+  }
+}
+
+.btn-primary {
+  background-color: $main-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    opacity: .8;
+  }
+}
+
+.btn-secondary {
+  background-color: $grey;
+
+  &:hover {
+    color: $white;
+    opacity: .8;
+  }
+}
+
+.btn-chevron {
+  padding: 0;
+  position: relative;
+  border: none;
+  color: $grey;
+  @include fontSize(12);
+  cursor: pointer;
+  transition: all .3s ease;
+  background-color: transparent;
+  outline: none;
+
+  &::before {
+    content: '>';
+    position: absolute;
+    top: 45%;
+    left: -1.4rem;
+    transform: translateY(-50%);
+    @include fontSize(12)
+  }
+
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.btn-more {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3px;
+  color: $white;
+  background-color: $main-color;
+  cursor: pointer;
+
+  &::after {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    @include fontSize(20)
+  }
+
+  &:hover {
+    color: $white;
+    opacity: .8;
+  }
+}
+
