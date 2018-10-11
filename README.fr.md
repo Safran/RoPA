@@ -142,5 +142,5 @@ L'application a été installée sur Redhat 7, Debian 9, MAMP 4.2 et 5.1.
 
 ## Licence
 
-Ce projet est sous licence GNU GPLv3 - voir le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
+Ce projet est sous licence GNU GPLv3 - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 Toute contribution ou travail de contributeur tel que décrit dans la version 3 de la Licence publique générale GNU en tant que « version contributeur » deviendra une contribution régie par la Licence publique générale GNU version 3.
