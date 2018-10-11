@@ -142,5 +142,5 @@ The package has been installed on Redhat 7, Debian 9, MAMP 4.2 and 5.1.
 
 ## License
 
-This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.
 Any contribution or work of contributor as described in the GNU GENERAL PUBLIC LICENSE Version 3 as « contributor version » shall become a contribution ruled under the GNU GENERAL PUBLIC LICENSE Version 3.
