@@ -19,11 +19,11 @@ Avantages de l'outil :
 
 ### Pré-requis
 
-Apache 2.4+
-PHP 7.1.3+
-Node.js 6.14.x
-npm 3.10.10
-Mysql 5.5.x
+Apache 2.4+  
+PHP 7.1.3+  
+Node.js 6.14.x  
+npm 3.10.10  
+Mysql 5.5.x  
 Composer
 
 #### Configuration PHP
@@ -42,7 +42,7 @@ Composer
 MySQLi, Zlib compression functions, DOM functions, Session support, PCRE functions, PHP-CLI, Curl, Multibyte string functions, Exif functions, GD, SOAP, LDAP, Memcache, OpenSSL, PDO, Tokenizer, XML, JSON, CType
 
 #### Configuration Apache
-Le DocumentRoot doit pointer vers le dossier RoPA/public.
+Le DocumentRoot doit pointer vers le dossier RoPA/public.  
 Le répertoire RoPA doit être défini sur AllowOverride All.
 
 #### Modules Apache
@@ -80,15 +80,15 @@ Entrer `php artisan RoPA:install` et répondre `yes` pour générer la clé de l
 
 #### *Accès*
 
-Vous devriez pouvoir charger la page `http://[APP_URL]/fr/login` pour vous connecter avec un compte local.
+Vous devriez pouvoir charger la page `http://[APP_URL]/fr/login` pour vous connecter avec un compte local.  
 Si vous souhaitez utiliser une authentification SAMLv2, vous devez charger la page `http://[APP_URL]`.
 
 ### Déploiement
 
 #### *SAMLv2 / LDAP*
 
-Modifier les variables suivantes dans le fichier .env : 
-SAML2_SP_x509="file://[CHEMIN COMPLET]/certs/saml.crt"
+Modifier les variables suivantes dans le fichier .env :  
+SAML2_SP_x509="file://[CHEMIN COMPLET]/certs/saml.crt"  
 SAML2_SP_PRIVATEKEY="file://[CHEMIN COMPLET]/certs/saml.pem"
 
 L'URL des métadata est : [APP_URL]/saml2/metadata
@@ -108,17 +108,17 @@ Ajouter ['--disable-notifications'] en second paramètre de command.
 
 #### *Compte*
 
-Un compte local est défini : 
-Administrateur : 
-Identifiant : admin
+Un compte local est défini :  
+Administrateur :  
+Identifiant : admin  
 Mot de passe : admin
 
-DPO : 
-Identifiant : dpo
+DPO :  
+Identifiant : dpo  
 Mot de passe : admin
 
-Salarié : 
-Identifiant : employee
+Salarié :  
+Identifiant : employee  
 Mot de passe : admin
 
 #### *E-mail*
@@ -127,7 +127,7 @@ Les e-mails peuvent être configurés dans le fichier .env.
 
 #### *Images*
 
-Vous pouvez modifier le favicon dans RoPA/public/images/favicon.png
+Vous pouvez modifier le favicon dans RoPA/public/images/favicon.png  
 Vous pouvez modifier le logo dans : 
 - RoPA/public/images/logo.png
 - RoPA/public/images/logo.svg
@@ -142,5 +142,5 @@ L'application a été installée sur Redhat 7, Debian 9, MAMP 4.2 et 5.1.
 
 ## Licence
 
-Ce projet est sous licence GNU GPLv3 - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est sous licence GNU GPLv3 - voir le fichier [LICENSE](LICENSE) pour plus de détails.  
 Toute contribution ou travail de contributeur tel que décrit dans la version 3 de la Licence publique générale GNU en tant que « version contributeur » deviendra une contribution régie par la Licence publique générale GNU version 3.
