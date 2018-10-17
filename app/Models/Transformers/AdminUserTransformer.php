@@ -40,7 +40,7 @@ class AdminUserTransformer extends TransformerAbstract
 					]) . '" data-toggle="modal" data-target="#delete_confirm"><i class="zmdi zmdi-minus-square text-danger pull-right"></i></a>';
 				break;
 			case 'lawyer':
-                if(\Auth::user()->can('destroy', $user))
+                if($user->supervisedStatements->isEmpty())
                 {
                     $role_manager .= '<a href="#" data-remote="' . route('admin.users.confirm-updaterole', [
                             $user,

@@ -84,7 +84,7 @@ class StatementPolicy
 	 */
 	public function validate(User $user, Statement $statement)
 	{
-		return in_array($user->role, [ 'employee' ]) && $statement->owner_id === $user->id;
+		return $statement->owner_id === $user->id;
 	}
 
 	/**
