@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  web:
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - .:/RoPA
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.5
+    command: --max-allowed-packet=512M
+    environment:
+      MYSQL_ROOT_PASSWORD: my-secure-password
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql:/var/lib/mysql
+      - ./database.sql:/docker-entrypoint-initdb.d/database.sql
