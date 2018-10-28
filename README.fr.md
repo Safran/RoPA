@@ -141,7 +141,7 @@ Par défaut, les images principales sont liés à `localhost` mais vous pouvez r
 
 L'application a été installée sur Redhat 7, Debian 9, MAMP 4.2 et 5.1.
 
-## Exécuter l'application localement avec `docker-compose`
+## Exécuter localement avec `docker-compose`
 
 L'application peut être exécutée localement à l'aide de `docker-compose`. La configuration fournie ne convient pas à un environnement de production, mais peut être utilisée pour le développement afin de ne pas avoir à mettre en place les outils nécessaires sur le système hôte.
 
@@ -164,7 +164,7 @@ DB_USERNAME=local_user
 DB_PASSWORD=local_password
 ```
 
-Enfin, on s'assure que l'application puisse accéder au dossier `storage`.
+Enfin, on s'assure que l'application puisse accéder au dossier `storage` à travers le volume attaché au container.
 
 ```bash
 $ sudo chmod -R 777 storage
