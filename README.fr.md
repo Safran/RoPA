@@ -4,6 +4,9 @@
 
 Le registre des activités de traitement est un outil distribué librement par [Safran](https://www.safran-group.com/) afin de réaliser les analyses de conformité avec la réglementation en matière de protection des données personnelles. Cette application se déploie sur un serveur afin d’en donner l’accès via un navigateur web.
 
+![Accueil](https://github.com/Safran/RoPA/blob/master/storage/app/public/homescreen_fr.png?raw=true)
+![Analyse](https://github.com/Safran/RoPA/blob/master/storage/app/public/analysisscreen_fr.png?raw=true)
+
 Avantages de l'outil :
 - contient le questionnaire du [registre PME](https://www.cnil.fr/fr/rgpd-et-tpepme-un-nouveau-modele-de-registre-plus-simple-et-plus-didactique) de la CNIL ;
 - gestion des questions de l'analyse (création, modification, suppression) ;

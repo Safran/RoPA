@@ -4,6 +4,9 @@
 
 The record of processing activities is a tool distributed freely by [Safran](https://www.safran-group.com/) in order to carry out analyzes of compliance with the regulations on data protection. This application is deployed on a server and can be accessed from a web browser.
 
+![Homepage](https://github.com/Safran/RoPA/blob/master/storage/app/public/homescreen_en.png?raw=true)  
+![Analysis](https://github.com/Safran/RoPA/blob/master/storage/app/public/analysisscreen_en.png?raw=true)
+
 Advantages of the tool:
 - contains the questions of the French Data Protection Authority (CNIL) for the [small and medium companies](https://www.cnil.fr/fr/rgpd-et-tpepme-un-nouveau-modele-de-registre-plus-simple-et-plus-didactique);
 - management of the questions of the analysis (creation, modification, deletion);
