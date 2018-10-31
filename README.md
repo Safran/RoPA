@@ -22,11 +22,11 @@ Advantages of the tool:
 
 ### Prerequisites
 
-Apache 2.4+
-PHP 7.1.3+
-Node.js 6.14.x
-npm 3.10.10
-Mysql 5.5.x
+Apache 2.4+  
+PHP 7.1.3+  
+Node.js 6.14.x  
+npm 3.10.10  
+Mysql 5.5.x  
 Composer
 
 #### PHP configuration
@@ -45,7 +45,7 @@ Composer
 MySQLi, Zlib compression functions, DOM functions, Session support, PCRE functions, PHP-CLI, Curl, Multibyte string functions, Exif functions, GD, SOAP, LDAP, Memcache, OpenSSL, PDO, Tokenizer, XML, JSON, CType
 
 #### Apache configuration
-The DocumentRoot should point to the RoPA/public folder.
+The DocumentRoot should point to the RoPA/public folder.  
 The RoPA folder must be set to AllowOverride All.
 
 #### Apache modules
@@ -84,15 +84,15 @@ Enter `php artisan RoPA:install` and answer `yes` to prompt to generate the app 
 
 #### *Access*
 
-You should be able to load the `http://[APP_URL]/en/login` page to connect with a local account.
+You should be able to load the `http://[APP_URL]/en/login` page to connect with a local account.  
 If you want to use SAMLv2 authentication, you should load the root page: `http://[APP_URL]`
 
 ### Deployment
 
 #### *SAMLv2 / LDAP*
 
-Change the following variables in .env to absolute path:
-SAML2_SP_x509="file://[YOUR FULLPATH]/certs/saml.crt"
+Change the following variables in .env to absolute path:  
+SAML2_SP_x509="file://[YOUR FULLPATH]/certs/saml.crt"  
 SAML2_SP_PRIVATEKEY="file://[YOUR FULLPATH]/certs/saml.pem"
 
 The URL for metatada is [APP_URL]/saml2/metadata
@@ -101,28 +101,28 @@ You can configure LDAP to check deleted users in .env and config/authcompany.php
 
 #### *Scheduling and Queues*
 
-A cron tab must be set:
+A cron tab must be set:  
 ````
 * * * * * php /[YOU FULLPATH]/artisan schedule:run >> /dev/null 2>&1
 * * * * * pgrep php > /dev/null || php /[YOU FULLPATH]/artisan queue:work >> /dev/null 2>&1
 ````
 
-> **Note:** You can edit the app/Console/Kernel.php file to stop receiving email notifications from scheduling:
+> **Note:** You can edit the app/Console/Kernel.php file to stop receiving email notifications from scheduling:  
 Add ['--disable-notifications'] in the second parameter for command.
 
 #### *Account*
 
-A local account is set:
-Administrator:
-Login: admin
+A local account is set:  
+Administrator:  
+Login: admin  
 Password: admin
 
-DPO:
-Login: dpo
+DPO:  
+Login: dpo  
 Password: admin
 
-Employee:
-Login: employee
+Employee:  
+Login: employee  
 Password: admin
 
 #### *EMail*
@@ -131,7 +131,7 @@ Emails can be configured in the .env file
 
 #### *Images*
 
-You can change the favicon in RoPA/public/images/favicon.png
+You can change the favicon in RoPA/public/images/favicon.png  
 You can change the logo in:
 - RoPA/public/images/logo.png
 - RoPA/public/images/logo.svg
@@ -202,5 +202,5 @@ $ php artisan
 
 ## License
 
-This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.  
 Any contribution or work of contributor as described in the GNU GENERAL PUBLIC LICENSE Version 3 as « contributor version » shall become a contribution ruled under the GNU GENERAL PUBLIC LICENSE Version 3.
