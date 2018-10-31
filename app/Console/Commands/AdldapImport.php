@@ -20,6 +20,17 @@ class AdldapImport extends Import
      */
     public function __construct()
     {
+        parent::__construct();
+    }
+
+
+    /**
+     * @throws \Adldap\Models\ModelNotFoundException
+     */
+    public function handle()
+    {
+        
+        /* This block was initially in construct. */
         if (Schema::hasColumn('users', 'type'))
         {
             $this->ldapusers = User::where('type', 'ldap')->get();
@@ -33,16 +44,10 @@ class AdldapImport extends Import
             $user->type = 'ldap_pending';
             $user->save();
         });
-
-        parent::__construct();
-    }
-
-
-    /**
-     * @throws \Adldap\Models\ModelNotFoundException
-     */
-    public function handle()
-    {
+        
+        
+        
+        
         $this->info("Currently " . $this->ldapusers->count() . " ldap users set to [pending]");
 
         $users = $this->getUsers();
