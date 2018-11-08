@@ -135,12 +135,12 @@ class StatementsExport implements FromQuery, Responsable, WithHeadings, WithMapp
 	{
 		$columns =  [
 			'C' => NumberFormat::FORMAT_DATE_DDMMYYYY,
-			'G' => NumberFormat::FORMAT_DATE_DDMMYYYY,
-			'H' => NumberFormat::FORMAT_DATE_DDMMYYYY,
+			'I' => NumberFormat::FORMAT_DATE_DDMMYYYY,
+			'J' => NumberFormat::FORMAT_DATE_DDMMYYYY,
 		];
 
 		$form = Form::current();
-		$count = 'I';
+		$count = 'K';
 		foreach($form->elements as $element)
 		{
 			if($element->type == 'datepicker')
