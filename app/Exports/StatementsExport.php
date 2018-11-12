@@ -6,25 +6,22 @@
   * SPDX-License-Identifier: GPL-3.0-only
   */
 
-
-
-
-
-
 namespace App\Exports;
 
 use App\Http\Repositories\StatementRepository;
 use App\Models\Form;
+use App\Models\FormElement;
 use Illuminate\Contracts\Support\Responsable;
 use Maatwebsite\Excel\Concerns\Exportable;
 use Maatwebsite\Excel\Concerns\FromQuery;
+use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 use Maatwebsite\Excel\Concerns\WithColumnFormatting;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use PhpOffice\PhpSpreadsheet\Shared\Date;
 use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
 
-class StatementsExport implements FromQuery, Responsable, WithHeadings, WithMapping, WithColumnFormatting
+class StatementsExport implements FromQuery, Responsable, WithHeadings, WithMapping, WithColumnFormatting, ShouldAutoSize
 {
 
 	use Exportable;
@@ -44,7 +41,8 @@ class StatementsExport implements FromQuery, Responsable, WithHeadings, WithMapp
 
 	public function __construct($type = 'inprogress')
 	{
-		$this->type       = $type;
+		\Cache::flush();
+		$this->type	   = $type;
 		$this->statements = new StatementRepository;
 		$this->fileName   = 'Declaration_' . $type . '.xlsx';
 	}
@@ -84,9 +82,19 @@ class StatementsExport implements FromQuery, Responsable, WithHeadings, WithMapp
 
 		$form = Form::current();
 
-		foreach($form->elements as $element)
+		foreach ($form->elements as $element)
 		{
-			$colums[] = $element->label;
+			$className = FormElement::type($element->type);
+			$input	 = new $className(FormElement::make([
+				'id'	  => $element->element_id,
+				'name'	=> $element->name,
+				'page_id' => $element->page_id,
+				'special' => $element->special
+			]), request());
+			if ($input->isExportable())
+			{
+				$colums[] = $element->label;
+			}
 		}
 
 
@@ -96,34 +104,60 @@ class StatementsExport implements FromQuery, Responsable, WithHeadings, WithMapp
 	public function map($statement): array
 	{
 		$columns = [
-			$statement->id,
-			$statement->form->title,
-			Date::dateTimeToExcel($statement->form->created_at),
-			$statement->supervisor->full_name ?? 'Not set',
-			$statement->owner->full_name ?? 'Not set',
-			$statement->author->full_name ?? 'Not set',
-			$statement->validated ? __('locale.yes'): __('locale.no'),
-			$statement->archived ? __('locale.yes'): __('locale.no'),
-			Date::dateTimeToExcel($statement->created_at),
-			Date::dateTimeToExcel($statement->updated_at),
+			$statement->id, // A
+			$statement->form->title, // B
+			Date::dateTimeToExcel($statement->form->created_at), // C
+			$statement->supervisor->full_name ?? 'Not set', // D
+			$statement->owner->full_name ?? 'Not set', // E
+			$statement->author->full_name ?? 'Not set', // F
+			$statement->validated ? __('locale.yes') : __('locale.no'), // G
+			$statement->archived ? __('locale.yes') : __('locale.no'), // H
+			Date::dateTimeToExcel($statement->created_at), // I
+			Date::dateTimeToExcel($statement->updated_at), // J
 		];
 
 		$form = Form::current();
 
-		foreach($form->elements as $element)
+		foreach ($form->elements as $element)
 		{
-			if($element->type == 'datepicker')
+			$className = FormElement::type($element->type);
+			$input	 = new $className(FormElement::make([
+				'id'	=> $element->element_id,
+				'name'	=> $element->name,
+				'page_id' => $element->page_id,
+				'special' => $element->special
+			]), request());
+			if ($input->isExportable())
 			{
-				$date = $statement->get($element->name);
-				if(is_string($date) || ! isset($date))
+				if ($element->type == 'datepicker')
 				{
-					$columns[] = "";
-				} else {
-					$columns[] = Date::dateTimeToExcel($date);
+					$date = $statement->get($element->name);
+					if (is_string($date) || ! isset($date))
+					{
+						$columns[] = "";
+					}
+					else
+					{
+						$columns[] = Date::dateTimeToExcel($date);
 
+					}
 				}
-			} else {
-				$columns[] = $statement->getAsString($element->name);
+				else
+				{
+					\Log::debug('[StatementExport::map] element {' . $element->name . '} (' . $element->type . ') => [' . $statement->getAsString($element->name) . ']');
+					try
+					{
+
+						if ($statement->isShown($element->name))
+						{
+							$columns[] = $statement->getAsString($element->name);
+						}
+					}
+					catch (\Exception $e)
+					{
+						$columns[] = 'XXXXX'; // Answer hidden or Not relevant or answer not set for this element
+					}
+				}
 			}
 		}
 

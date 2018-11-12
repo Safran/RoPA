@@ -6,11 +6,6 @@
   * SPDX-License-Identifier: GPL-3.0-only
   */
 
-
-
-
-
-
 namespace App\Form\Fields;
 
 /**
@@ -24,6 +19,16 @@ class ModelField extends Field
 	/**
 	 * @var bool
 	 */
-	protected $hasHelp = true;
+  protected $hasHelp = false;
+
+    public function getValue($value = null)
+    {
+      return '';
+    }
+
+    public function isExportable(): bool
+    {
+        return false;
+    }
 
 }

@@ -100,9 +100,8 @@ abstract class Field
 	 */
 	public function getValueAsString($value = null)
 	{
-	    $value = $this->getValue($value);
-	    if(is_array($value)) dd($this);
-		return (string)$this->getValue($value);
+		$value = $this->getValue($value);
+		return (string)$value;
 	}
 
 
@@ -217,5 +216,10 @@ abstract class Field
 	public function getValueToJson($value = null)
 	{
 		return $this->getValue($value);
+	}
+
+	public function isExportable(): bool
+	{
+		return true;
 	}
 }

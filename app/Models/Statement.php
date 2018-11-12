@@ -18,21 +18,21 @@ use Illuminate\Support\Collection;
  * App\Models\Statement
  *
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Answer[] $answers
- * @property-read \App\Models\Form                                              $form
- * @property-read mixed                                                         $completed_answers
- * @property-read mixed                                                         $questions_number
- * @property-read mixed                                                         $validated_answers
- * @property-read \App\Models\User                                              $owner
- * @property-read \App\Models\User                                              $supervisor
+ * @property-read \App\Models\Form											  $form
+ * @property-read mixed														 $completed_answers
+ * @property-read mixed														 $questions_number
+ * @property-read mixed														 $validated_answers
+ * @property-read \App\Models\User											  $owner
+ * @property-read \App\Models\User											  $supervisor
  * @mixin \Eloquent
- * @property int                                                                $id
- * @property int                                                                $form_id
- * @property int|null                                                           $supervisor_id
- * @property int                                                                $owner_id
- * @property int                                                                $validated
- * @property int                                                                $archived
- * @property \Carbon\Carbon|null                                                $created_at
- * @property \Carbon\Carbon|null                                                $updated_at
+ * @property int																$id
+ * @property int																$form_id
+ * @property int|null														   $supervisor_id
+ * @property int																$owner_id
+ * @property int																$validated
+ * @property int																$archived
+ * @property \Carbon\Carbon|null												$created_at
+ * @property \Carbon\Carbon|null												$updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereArchived( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereCreatedAt( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereFormId( $value )
@@ -41,20 +41,20 @@ use Illuminate\Support\Collection;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereSupervisorId( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereUpdatedAt( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereValidated( $value )
- * @property string|null                                                        $deleted_at
+ * @property string|null														$deleted_at
  * @method static bool|null forceDelete()
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Statement onlyTrashed()
  * @method static bool|null restore()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereDeletedAt( $value )
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Statement withTrashed()
  * @method static \Illuminate\Database\Query\Builder|\App\Models\Statement withoutTrashed()
- * @property int                                                                $created_by
- * @property int|null                                                           $modified_by
- * @property-read \App\Models\User                                              $author
- * @property-read \App\Models\User                                              $editor
- * @property-read mixed                                                         $cnil_elements
- * @property-read mixed                                                         $progress
- * @property-read \App\Models\User|null                                         $modificator
+ * @property int																$created_by
+ * @property int|null														   $modified_by
+ * @property-read \App\Models\User											  $author
+ * @property-read \App\Models\User											  $editor
+ * @property-read mixed														 $cnil_elements
+ * @property-read mixed														 $progress
+ * @property-read \App\Models\User|null										 $modificator
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereCreatedBy( $value )
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Statement whereModifiedBy( $value )
  */
@@ -77,7 +77,7 @@ class Statement extends Model
 	];
 
 	static $colors = [
-		'pending'    => [
+		'pending'	=> [
 			'#B23562',
 			'#9F3A67',
 			'#8A3F6C',
@@ -135,7 +135,7 @@ class Statement extends Model
 	 */
 	public function answersForQuestions(): Collection
 	{
-		$id     = $this->id;
+		$id	 = $this->id;
 		$result = \Cache::remember('statements-answers-' . $this->id, 10, function () use ($id) {
 			$query = static::query();
 			$query->select([
@@ -190,23 +190,26 @@ class Statement extends Model
 				try
 				{
 					$className = FormElement::type($element->type);
-					$input     = new $className(FormElement::make([
-						'id'      => $element->element_id,
-						'name'    => $element->name,
+					$input	 = new $className(FormElement::make([
+						'id'	  => $element->element_id,
+						'name'	=> $element->name,
 						'page_id' => $element->page_id,
 						'special' => $element->special
 					]), request());
 
 					if ( ! $result->has($element->name))
 					{
-						$result[$element->name]        = new \stdClass();
-						$result[$element->name]->shown = true;
+						$result[$element->name]		= new \stdClass();
+						$result[$element->name]->shown = false;
 					}
-					$result[$element->name]->name      = $element->name;
-					$result[$element->name]->value     = isset($element->answer) ? $input->getValue($element->answer) : null;
-					$result[$element->name]->string    = ( isset($element->answer) && $result[$element->name]->value ) ? $input->getValueAsString($element->answer) : null;
-					$result[$element->name]->validated = isset($element->validated_at);
-					$result[$element->name]->page_id   = $element->page_id;
+					$result[$element->name]->name	   = $element->name;
+					$result[$element->name]->value	  = isset($element->answer) ? $input->getValue($element->answer) : null;
+					$result[$element->name]->string	 = ( isset($element->answer) && ( $result[$element->name]->value != null ) ) ? $input->getValueAsString($element->answer) : null;
+					$result[$element->name]->validated  = isset($element->validated_at);
+					$result[$element->name]->page_id	= $element->page_id;
+					$result[$element->name]->exportable = $input->isExportable();
+
+					\Log::debug("[Statement::reload] {" . $element->name . "} => " . ( ( isset($element->answer) && ( $result[$element->name]->value != null ) ) ? "OUI" : "NON" ));
 
 					//if($result[$element->name]->name === 'name')
 					//echo "<h3> " . $this->id . " {". json_encode($element) . "} [" . json_encode($result[$element->name]->value) . "]</h3>";
@@ -218,12 +221,13 @@ class Statement extends Model
 
 						$className = FormElement::type($element->rule_type);
 						$ruleinput = new $className(FormElement::make([
-							'name'    => $element->rule_name,
-							'id'      => $element->element_rule_id,
+							'name'	=> $element->rule_name,
+							'id'	  => $element->element_rule_id,
 							'special' => $element->rule_special,
 						]), request());
 
 						$rule_value = isset($element->rule_answer) ? $ruleinput->getValue($element->rule_answer) : null;
+
 						if (isset($rule_value))
 						{
 							/**
@@ -251,18 +255,25 @@ class Statement extends Model
 							{
 								if (is_object($rule_value))
 								{
-									$result[$element->name]->shown = ( $element->if_element_value === $rule_value->value );
+									// We have a OR Condition one false result give false to the shown attribute
+									if ($element->if_element_value === $rule_value->value)
+									{
+										$result[$element->name]->shown = true;
+									}
 								}
 								else
 								{
-									$result[$element->name]->shown = ( $element->if_element_value === $rule_value );
+									if (( $element->if_element_value === $rule_value ))
+									{
+										$result[$element->name]->shown = true;
+									}
 								}
 							}
 						}
-						else
-						{
-							$result[$element->name]->shown = false; // Considering no answer can not show hidden element
-						}
+					}
+					else
+					{
+						$result[$element->name]->shown = true;
 					}
 				}
 				catch (\Exception $e)
@@ -361,6 +372,63 @@ class Statement extends Model
 		return null;
 	}
 
+	/**
+	 * Is this answer shown ?
+	 *
+	 * @param $key
+	 *
+	 * @return bool
+	 * @throws \Exception
+	 */
+	public function isShown($key): bool
+	{
+		if ( ! isset($this->answers))
+		{
+			$this->answers = $this->answersForQuestions();
+		}
+
+		if ($this->answers->has($key))
+		{
+			return $this->answers[$key]->shown;
+		}
+		throw new \Exception('Answer [' . $key . '] does\'t exist');
+	}
+
+	/**
+	 * Is this answer hidden for this statement ?
+	 *
+	 * @param $key
+	 *
+	 * @return bool
+	 * @throws \Exception
+	 */
+	public function isHidden($key): bool
+	{
+		return ! $this->isShown($key);
+	}
+
+	/**
+	 * Should this answer be exported ?
+	 *
+	 * @param $key answer key
+	 *
+	 * @return bool
+	 * @throws \Exception
+	 */
+	public function isExportable($key): bool
+	{
+		if ( ! isset($this->answers))
+		{
+			$this->answers = $this->answersForQuestions();
+		}
+
+		if ($this->answers->has($key))
+		{
+			return $this->answers[$key]->exportable;
+		}
+		throw new \Exception('Answer [' . $key . '] does\'t exist');
+	}
+
 
 	/**
 	 *
@@ -418,7 +486,7 @@ class Statement extends Model
 			$result = [
 				'globalquestions' => 0,
 				'globalanswers'   => 0,
-				'global'          => 0,
+				'global'		  => 0,
 			];
 
 			if ( ! isset($this->answers))
@@ -427,10 +495,10 @@ class Statement extends Model
 			}
 
 			$shownquestions = $this->answers;
-			$statement      = $this;
+			$statement	  = $this;
 			$this->form->pages->each(function ($page) use (&$result, $statement, $shownquestions) {
 				$result[$page->id] = 0;
-				$questions         = $shownquestions->filter(function ($element) use ($page) {
+				$questions		 = $shownquestions->filter(function ($element) use ($page) {
 					return ( $page->id === $element->page_id );
 				});
 				if ($questions->isEmpty())
@@ -439,10 +507,10 @@ class Statement extends Model
 				}
 				else
 				{
-					$answers                   = $questions->filter(function ($element) {
+					$answers				   = $questions->filter(function ($element) {
 						return $element->validated;
 					});
-					$result[$page->id]         = 100 * $answers->count() / $questions->count();
+					$result[$page->id]		 = 100 * $answers->count() / $questions->count();
 					$result['globalquestions'] += $questions->count();
 					$result['globalanswers']   += $answers->count();
 				}

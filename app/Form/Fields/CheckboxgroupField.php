@@ -127,7 +127,9 @@ class CheckboxgroupField extends Field
 
 	public function getValueAsString($value = null)
 	{
-		return collect($this->getValue($value))->pluck('label')->implode(", ");
+		return collect($this->getValue($value))->transform(function($value) {
+			return $value->label->{locale()};
+		})->implode(", ");
 	}
 
 	public function getValueToJson($value = null)

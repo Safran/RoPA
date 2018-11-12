@@ -7,10 +7,6 @@
   */
 
 
-
-
-
-
 namespace App\Form\Fields;
 
 use Illuminate\Http\Request;
@@ -53,5 +49,10 @@ class StaticField extends Field
 	public function getDefaultValue()
 	{
 		return 'not-relevant';
+	}
+
+	public function isExportable(): bool
+	{
+		return false;
 	}
 }
