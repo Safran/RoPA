@@ -8,6 +8,7 @@ RUN apt-get update \
         libpng-dev \
         libxml2-dev \
         libldap2-dev \
+        libzip-dev \
     && curl -sL https://deb.nodesource.com/setup_6.x | bash \
     && apt-get install -y nodejs \
     && docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ \
